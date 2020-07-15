@@ -12,6 +12,7 @@ These instructions are intended for CRUK TDL and FGC Bioinformaticians wishing t
 4. You should see the following login screen:
 
 ![](./imgs/login.png)
+
 5. Enter your credentials and tick the 'Stay signed in' box.
 
 ## Working with Github repositories
