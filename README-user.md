@@ -24,7 +24,7 @@ These instructions are intended for CRUK TDL and FGC Bioinformaticians wishing t
 
 ## Uploading data
 
-1. Use the 'Upload' button in the 'Files' tab (bottom left):
+1. Use the 'Upload' button in the 'Files' tab (bottom right):
 
 ![](./imgs/upload-data.png)
 
