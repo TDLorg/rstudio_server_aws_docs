@@ -14,7 +14,7 @@ These instructions are intended for CRUK FGC or TDL Bioinformaticians to aid in 
 
 ## Access via SSH
 
-1. The key-pair 'pem' file is needed and must be private (`chmod 400 key.pem`):
+1. The key-pair 'pem' file is needed and must be readable only by root (`chmod 400 key.pem`):
 
 ```sh
 ssh -i key.pem ubuntu@<ip-address>
