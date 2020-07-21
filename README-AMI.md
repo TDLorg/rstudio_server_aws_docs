@@ -43,7 +43,7 @@ devtools::install_version("XML", version = "3.98-1.5")
 ```
 devtools::install_github(repo = "prdm0/ropenblas", force = TRUE)
 ```
-5. Compile and install the latest version of `R`:
+5. Compile and install the latest version of `R` (as this can take some time, you may want to run the following in a `tmux` session, detach, and log out while it finishes):
 ```
 ropenblas::rcompiler()
 ```
