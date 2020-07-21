@@ -1,4 +1,4 @@
-# Instructions for setting up an RStudio Server AMI for the *latest* R and RStudio versions
+# Instructions for creating an RStudio Server AMI for the *latest* R and RStudio versions
 
 ## Overview
 
