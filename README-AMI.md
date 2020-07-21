@@ -48,6 +48,7 @@ devtools::install_github(repo = "prdm0/ropenblas", force = TRUE)
 ropenblas::rcompiler()
 ```
 To install a specific version of `R`, use the `x` argument, e.g. `rcompiler(x = "3.6.2")`.
+
 6. Install any `R` packages that you want to be part of your AMI (e.g. `install.packages("tidyverse")`)
 
 ## Update RStudio Server
