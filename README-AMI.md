@@ -39,15 +39,16 @@ install.packages("devtools")
 ```
 devtools::install_version("XML", version = "3.98-1.5")
 ```
-3. Install R package `ropenblas`:
+4. Install R package `ropenblas`:
 ```
 devtools::install_github(repo = "prdm0/ropenblas", force = TRUE)
 ```
-4. Compile and install the latest version of `R`:
+5. Compile and install the latest version of `R`:
 ```
 ropenblas::rcompiler()
 ```
 To install a specific version of `R`, use the `x` argument, e.g. `rcompiler(x = "3.6.2")`.
+6. Install any `R` packages that you want to be part of your AMI (e.g. `install.packages("tidyverse")`)
 
 ## Update RStudio Server
 
@@ -67,8 +68,15 @@ sudo gdebi rstudio-server-1.3.1056-amd64.deb
 .libPaths("/home/rstudio/R")
 ```
 
+## Make sure RStudio Server is working
+
+1. Log in using the IP address, `rstudio` username, and password (EC2 Instance ID).
+2. Make sure that you have the expected version of `R` and RStudio.
+3. Try to plot something to ensure X11 is working.
+4. Check that you have the expected capabilities (`capabilities()`).
+
 ## Create an AMI
 
 1. Follow the instructions [here](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/tkv-create-ami-from-instance.html).
-
+2. Start an EC2 instance using the new AMI and test that it is working.
 
