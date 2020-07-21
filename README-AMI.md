@@ -69,6 +69,6 @@ sudo gdebi rstudio-server-1.3.1056-amd64.deb
 
 ## Create an AMI
 
-
+1. Follow the instructions [here](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/tkv-create-ami-from-instance.html).
 
 
