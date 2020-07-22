@@ -16,7 +16,7 @@ These instructions are intended for CRUK FGC or TDL Bioinformaticians to aid in 
 
 1. The key-pair 'pem' file is needed and must be readable only by root (`chmod 400 key.pem`):
 
-```sh
+```
 ssh -i key.pem ubuntu@<ip-address>
 ```
 
@@ -29,9 +29,12 @@ ssh -i key.pem ubuntu@<ip-address>
 
 1. SSH into the machine as user 'ubuntu' (see above).
 2. Create a new user:
-
-```sh
+```
 sudo adduser <username>
 ```
 3. In the new users home folder (`/home/<username>`), create an `R` subdirectory.
-4. Provide the IP address and username and passwords defined in Step 1 above to the new user and point them towards the [user documentation](./README-user.md).
+4. Create an `.Rprofile` file in `/home/<username>` containing the following line of `R` code:
+```
+.libPaths("/home/<username>/R")
+```
+5. Provide the IP address and username and passwords defined in Step 1 above to the new user and point them towards the [user documentation](./README-user.md).

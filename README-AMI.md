@@ -24,6 +24,7 @@ ssh -i key.pem ubuntu@<ip-address>
 ```
 sudo apt-get install libpcre2-dev libgtk2.0-dev xvfb libcairo2-dev xorg openbox
 ```
+(**Note:** if you get an error relating to 'dpkg frontend', you may need to wait a few minutes before executing the above).
 
 ## Update `R`
 
@@ -48,8 +49,9 @@ devtools::install_github(repo = "prdm0/ropenblas", force = TRUE)
 ropenblas::rcompiler()
 ```
 To install a specific version of `R`, use the `x` argument, e.g. `rcompiler(x = "3.6.2")`.
+**Note**: when compiling you may receive a cryptic error relating to `stats.so` - re-run the compilation and this error will magically disappear :-)
 
-6. Install any `R` packages that you want to be part of your AMI (e.g. `install.packages("tidyverse")`)
+6. Close `R`, restart it (checking that you have the expected version), and install any `R` packages that you want to be part of your AMI (e.g. `install.packages("tidyverse")`)
 
 ## Update RStudio Server
 
@@ -60,13 +62,6 @@ wget https://download2.rstudio.org/server/xenial/amd64/rstudio-server-1.3.1056-a
 2. Install RStudio Server, e.g.:
 ```
 sudo gdebi rstudio-server-1.3.1056-amd64.deb
-```
-
-## Configure `rstudio` user for local `R` package installs
-
-1. Create an `.Rprofile` file in `/home/rstudio` containing the following line of `R` code:
-```
-.libPaths("/home/rstudio/R")
 ```
 
 ## Make sure RStudio Server is working
